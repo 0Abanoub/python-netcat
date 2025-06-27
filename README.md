@@ -1,27 +1,30 @@
-# BHP Netcat Clone (Educational)
+# Python Netcat Clone (Educational Tool)
 
-This is a Python-based Netcat-like tool built while studying *Black Hat Python* book.  
-It supports:
-- Reverse shell
-- Command execution
-- File upload
-- Listening for incoming connections
+This is a custom implementation of Netcat built using raw sockets in Python.  
+Created while studying *Black Hat Python*, it replicates core Netcat features including:
 
-⚠️ This project is for **educational purposes only**. Do not use it on systems you don't own or have permission to test.
+- Reverse Shell
+- Remote Command Execution
+- File Upload
+- Listening for connections
 
-## Usage
+⚠️ **Disclaimer:**  
+This tool is created purely for **educational purposes**.  
+Do not use it on systems you do not own or have explicit permission to test.
 
-Examples:
+---
+
+## 🧪 Usage Examples
 
 ```bash
-# Listen for a reverse shell
+# Start a listener with command shell
 python netcat.py -t 0.0.0.0 -p 5555 -l -c
 
 # Upload a file
 python netcat.py -t 0.0.0.0 -p 5555 -l -u=output.txt
 
-# Execute a command
+# Execute a command automatically upon connect
 python netcat.py -t 0.0.0.0 -p 5555 -l -e="ls -la"
 
-# Send input to a server
+# Send a message to server
 echo "hello" | python netcat.py -t 192.168.1.10 -p 5555
