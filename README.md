@@ -28,3 +28,19 @@ python netcat.py -t 0.0.0.0 -p 5555 -l -e="ls -la"
 
 # Send a message to server
 echo "hello" | python netcat.py -t 192.168.1.10 -p 5555
+
+---
+
+## 🛠 Tech Stack
+
+- Python 3
+- Sockets
+- Subprocess
+- Threading
+- argparse
+
+---
+
+### 📚 Based on
+📘 Black Hat Python, 2nd Edition
+Author: Justin Seitz
